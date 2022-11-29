@@ -1,0 +1,59 @@
+
+breedthreads	= auto
+evalthreads	= auto
+seed.0		= time
+
+state		= ec.simple.SimpleEvolutionState
+
+pop		= ec.Population
+init		= ec.simple.SimpleInitializer
+finish		= ec.simple.SimpleFinisher
+breed		= ec.es.MuPlusLambdaBreeder
+exch		= ec.simple.SimpleExchanger
+
+jobs = 1
+
+pop.subpops		= 1
+
+pop.subpop.0		= ec.Subpopulation
+
+pop.subpop.0.duplicate-retries 	= 0
+#
+pop.subpop.0.species 		= ec.vector.FloatVectorSpecies
+pop.subpop.0.species.ind	= ec.vector.DoubleVectorIndividual
+
+
+pop.subpop.0.species.pipe			= ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.source.0		= ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.source.0.source.0	= ec.es.ESSelection
+pop.subpop.0.species.pipe.source.0.source.1	= ec.es.ESSelection
+
+eval		= ec.simple.SimpleEvaluator
+eval.problem		= EvaluatorFit
+
+
+quit-on-run-complete	= true
+checkpoint		= false
+checkpoint-prefix	= ec
+checkpoint-modulo	= 1
+
+#
+#
+generations		= 5000
+
+es.mu.0=5000
+es.lambda.0=25000
+
+pop.subpop.0.size = 5000
+
+pop.subpop.0.species.fitness 	= ec.simple.SimpleFitness
+pop.subpop.0.species.fitness.maximize = true
+
+stat		= ec.simple.SimpleStatistics
+#stat.file=../output/Full
+stat.num-children = 1
+stat.child.0 = ec.simple.SimpleShortStatistics
+#stat.child.0.file=../output/Stat
+
+stat.do-message=false
+stat.do-generation = false
