@@ -29,28 +29,9 @@ public class ECJStarterForEqnSolver {
 			
 			ParameterDatabase parameterDB=null;
 				try {
-					String fileName = "";				
-				
-					if(Equation.sysConfig.getNExpTrials()==1)
-						fileName = "input//eqnsolver_real.params";
-					if(Equation.sysConfig.getNExpTrials()==2)
-						fileName = "input//eqnsolver_real_dup.params";
-					if(Equation.sysConfig.getNExpTrials()==3)	
-						fileName = "input//eqnsolver_real_dup2.params";				
-					if(Equation.sysConfig.getNExpTrials()==4)	
-						fileName = "input//eqnsolver_real_dup3.params";	
+					String fileName = "";			
 					
-					if(Equation.sysConfig.getNExpTrials()==5)	
-						fileName = "input//eqnsolver_real_dup4.params";	
-					if(Equation.sysConfig.getNExpTrials()==6)	
-						fileName = "input//eqnsolver_real_dup5.params";	
-					if(Equation.sysConfig.getNExpTrials()==7)	
-						fileName = "input//eqnsolver_real_dup6.params";	
-					if(Equation.sysConfig.getNExpTrials()==8)	
-						fileName = "input//eqnsolver_real_dup7.params";	
-					
-					if(Equation.sysConfig.getNExpTrials()==15)	
-						fileName = "input//eqnsolver_real_dup14.params";	
+					fileName = "input//eqnsolver_real.params";					
 					
 					File f = new File(fileName); 
 					parameterDB = new ParameterDatabase(f);
