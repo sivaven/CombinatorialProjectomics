@@ -1,13 +1,13 @@
 # CombinatorialProjectomics
- Quantification of Neuronal Projection Patterns
+ Quantification of Distinct Neuronal Projection Patterns from Retrograde Tracing
 
 [I] Specify model configuration in input/primary_input.json
 1.	nRegions correspond to the number of target regions
 2.	nInjections correspond to the number of simultaneous injections
-Note currently there is only functionality for 4 targets and triple (3) injections
+    (Note currently there is only functionality for 4 targets and triple (3) injections)
 3.	nExpTrials represent the number of repetitions of triple injections to be performed
 4.	mockupID refers to the name of the excel sheet (input/model_inputs.xlsx) where the model constraints are specified. These are the counts of cells expressing different combinations of colors. Counts must be specified according to the order of equations present in Equations_4C3/. 
-5.	noiseLevel refers to subsequent columns in the same sheet that mockupID refers to. These corresponds to noisy surrogate counts estimated from simulations of experiments. This is always ‘0’ for experimental counts or surrogate counts without noise. Simulated surrogated counts with 1% noise is specified in column index 1, 5% in column index 2, and 10% in column index 3.
+5.	noiseLevel refers to subsequent columns in the same sheet that mockupID refers to. These correspond to noisy surrogate counts estimated from simulations of experiments. This is always ‘0’ for experimental counts or surrogate counts without noise. Simulated surrogated counts with 1% noise is specified in column index 1, 5% in column index 2, and 10% in column index 3.
 
 [II] Specify model constraints in input/model_inputs.xlsx
 1.	refer to steps 4 and 5 in [I] to list model inputs (constraints).
