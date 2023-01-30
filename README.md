@@ -17,7 +17,7 @@
 
 [III] Specify population-level Evolutionary Strategies (ES) parameters such as the number of generations and population sizes in input/base_es.params and genome-level mutation/crossover parameters in eqnsolver_real.params. The genome size parameter in eqnsolver_real.params must be updated according to nExpTrials (see [I]-3). The genome size equals the sum of the number of unknown integers (counts of projection patterns) and the number of unknown real numbers (proportional to the number of injection experiments) plus one dummy gene. After step [I], one can also query SystemConfig.getNGenes() to identify the genome size.
 
-[IV] The main program to solve the system of equations is src/ECJStarterForEqnSolver.java. This program will run several independent ES instances with random initial conditions. The outputs are written to the output/ directory. 
+[IV] The main program to solve the system of equations is src/ECJStarterForEqnSolver.java. This program will run several independent ES instances with random initial conditions. The outputs are written to the output/ directory. One instance of the solver can take a few HOURS to complete on a normal computer. 
 
 [V] Utility functions are available in src/PostECJ.java to go through the outputs generated from step [IV] and consolidate the results. The best solutions identified (counts of 15 projection patterns) will be written to Output/consolidated/m<mockupID>/XXX_acceptedSolns.csv
 
