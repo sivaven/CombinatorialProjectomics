@@ -2,9 +2,12 @@
  Quantification of Distinct Neuronal Projection Patterns from Retrograde Tracing
 
 
+
+This code requires the Java Development Kit (JDK). It is recommended that the users install Eclipse IDE, which comes with the latest JDK.
+
 The following external Java libraries are required (included in lib/):
 - ECJ v23.0 
-- Apache Commons Math v3.0
+- Apache Commons Math3 v3.6
 
 The software is tested on both windows and linux environments using the above libraries.
 
